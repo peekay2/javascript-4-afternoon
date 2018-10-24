@@ -14,9 +14,10 @@
 */
 
 // Code here
-
-
-
+function CarFactory(make, model) {
+  this.make = make;
+  this.model = model;
+}
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -33,14 +34,13 @@ function Employee(name, email, hireDate) {
 */
 
 // Code here
-
-
+let bob = new Employee("Bob", "bob@gmail.com", "01-02-98");
 
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
-var prius = new Car('Toyota', 'Prius', 2011);
-var mustang = new Car('Ford', 'Mustang', 2013);
+var prius = new Car("Toyota", "Prius", 2011);
+var mustang = new Car("Ford", "Mustang", 2013);
 prius.moveCar(); // Increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); // Increments mustang' move property by 10. Returns the new move property.
 // Do not edit the code above.
@@ -54,5 +54,12 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 */
 
 // Code here
-
-
+function Car(make, model, year) {
+  let move = 0;
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.moveCar = () => {
+    return (move += 10);
+  };
+}
